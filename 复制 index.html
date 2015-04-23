@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet"/>
+		<style>
+			body{
+				margin: 0;
+				background:-webkit-linear-gradient(top,#4d5055,#383b3e);
+			}
+		</style>
+		<style>
+			.timeline{
+				background:-webkit-linear-gradient(top,#4d5055,#383b3e);
+				height: 100%;
+				position: relative;
+			}
+			.timeline .cover{
+				background-image: url(img/bg4.png);
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+			.timeline ul{
+				list-style: none;
+				margin: 0;
+				padding: 35px 0 0 0;
+				height: 100%;
+			}
+			.timeline .cover:before{
+				content: "";
+				display: block;
+				width: 2px;
+				height: 100%;
+				background-color: #26282b;
+				box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.3);
+				margin: 0 auto;
+			}
+			.timeline ul li{
+				margin: 0 auto;
+			}
+			.timeline .circle{
+				border-radius: 50%;
+				background-color: #191919;
+				text-align: center;
+				color: #d3d3d3;
+				position: relative;
+				width: 56px;
+				height: 56px;
+				line-height: 55px;
+				box-shadow: 0px 2px 10px -7px;
+				z-index: 0;
+				margin-bottom: 30px;
+			}
+			.timeline .circle:after{
+				content: "";
+				display: block;
+				background: -webkit-linear-gradient(top,#4d5055,#383b3e);
+				border-radius: 50%;
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				width: 50px;
+				height: 50px;
+				z-index: -2;
+			}
+			.timeline .circle.small{
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+			}
+			.timeline .circle.small:after{
+				width: 34px;
+				height: 34px;
+			}
+			.timeline .avatar img{
+				width: 184px;
+				height: 184px;
+				border-radius: 50%;
+				position: absolute;
+				top: 7px;
+				left: 7px;
+				border: solid 1px #131313;
+			}
+			.timeline .avatar{
+				width: 200px;
+				height: 200px;
+				margin-bottom: 70px;
+			}
+			.timeline .avatar:after{
+				width: 196px;
+				height: 196px;
+				top: 2px;
+				left: 2px;
+			}
+			/*animate*/
+			.timeline input[type=checkbox],
+			.timeline input[type=radio]{
+				display: none;
+			}
+			.timeline input:checked~.content{
+				display: block;
+				-webkit-animation: showdialog 2s;
+			}
+			.timeline input~.content{
+				-webkit-animation: hidedialog 2s;
+				display: none;
+			}
+			@-webkit-keyframes showdialog{
+				0%{
+					width: 0px;
+					height: 0px;
+					margin-top: -30px;
+					left: 60px;
+				}
+				50%{
+					width: 550px;
+					height: 0px;
+					margin-top: -30px;
+					left: 120px;
+				}
+				100%{
+					width: 550px;
+					height: 400px;
+					margin-top: -200px;
+				}
+			}
+			@-webkit-keyframes hidedialog{
+				0%{
+					display: block;
+					width: 550px;
+					height: 400px;
+					margin-top: -200px;
+				}
+				50%{
+					width: 550px;
+					height: 0px;
+					margin-top: -30px;
+				}
+				100%{
+					display: none;
+					width: 0px;
+					height: 0px;
+					margin-top: -30px;
+				}
+			}
+			.timeline .content{
+				display: none;
+				position: absolute;
+				width: 550px;
+				height: 400px;
+				margin-top: -200px;
+				left: 120px;
+				border: 2px solid #26282b;
+				box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.3);
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			.timeline .content:after{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				box-shadow: 0 0 1px 0px rgba(255, 255, 255, 0.3) inset;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="timeline" style="width: 350px;">
+			<div class="cover"></div>
+			<ul>
+				<li class="circle avatar"><img src="img/4-140911133935.jpg"></li>
+				<li class="circle"><input type="radio" id="radio1" name="hehe"/><label for="radio1"><i class="icon-camera-retro"></i></label><div class="content">adsfasdfsdf</div></li>
+				<li class="circle"><input type="radio" id="radio2" name="hehe"/><label for="radio2">2014</label><div class="content">adsfasdfsdf</div></li>
+				<li class="circle"><input type="radio" id="radio3" name="hehe"/><label for="radio3"><i class="icon-camera-retro"></i></label><div class="content">adsfasdfsdf</div></li>
+				<li class="circle"><input type="radio" id="radio4" name="hehe"/><label for="radio4"><i class="icon-camera-retro"></i></label><div class="content">adsfasdfsdf</div></li>
+				<li class="circle small"><input type="radio" id="radio5" name="hehe"/><label for="radio5"><i class="icon-globe"></i></label><div class="content">adsfasdfsdf</div></li>
+				<li class="circle"><input type="radio" id="radio6" name="hehe"/><label for="radio6"><i class="icon-camera-retro"></i></label><div class="content">adsfasdfsdf</div></li>
+				<li class="circle"><input type="radio" id="radio7" name="hehe"/><label for="radio7"><i class="icon-camera-retro"></i></label></li>
+				<li class="circle small"><input type="radio" id="radio8" name="hehe"/><label for="radio8"><i class="icon-user"></i></label></li>
+			</ul>
+		</div>
+	</body>
+</html>
